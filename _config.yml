@@ -5,16 +5,16 @@
 # Site
 title: BigColaXD's Blog
 subtitle: ""
-description: ""
+description: "BigColaXD's Blog"
 keywords:
 author: BigColaXD
-language: zh-CN
+language: en
 timezone: "Asia/Shanghai"
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://BigColaXD.github.io/
-permalink: :year-:month-:day/:id
+permalink: :year-:month-:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'indnex.html' from permalinks
