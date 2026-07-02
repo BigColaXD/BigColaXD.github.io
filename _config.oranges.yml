@@ -177,18 +177,18 @@ footer:
   # http://busuanzi.ibruce.info/
   views:
     enable: true
-    provider: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+    provider: "https://events.vercount.one/js"
     item:
       - enable: true
-        id: busuanzi_value_site_pv
+        id: vercount_value_site_pv
         name: 本站总访问量
         unit: 次
       - enable: true
-        id: busuanzi_value_page_pv
+        id: vercount_value_page_pv
         name: 本文总阅读量
         unit: 次
       - enable: true
-        id: busuanzi_value_site_uv
+        id: vercount_value_site_uv
         name: 本站访客数
         unit: 人
 
