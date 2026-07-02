@@ -64,7 +64,7 @@ user@tryhackme$ curl 'http://10.10.98.101/customers/reset?email=robert%40acmeits
 
 有时，Cookie 值可能看起来像一长串随机字符;这些被称为哈希，是原始文本的不可逆表示。以下是您可能会遇到的一些示例：
 
-| **Original String**<br>**原始字符串**​ | **Hash Method******<br>**Hash 方法**​ | **Output**​ |
+| **Original String**<br>**原始字符串**​ | **Hash Method**<br>**Hash 方法**​ | **Output**​ |
 | --- | --- | --- |
 | 1 | md5 | c4ca4238a0b923820dcc509a6f75849b |
 | 1 | sha-256 | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b |
