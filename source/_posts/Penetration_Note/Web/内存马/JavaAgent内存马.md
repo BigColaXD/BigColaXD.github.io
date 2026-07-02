@@ -692,7 +692,7 @@ public class AgentMain {
 
 ##### 效果实现
 
-这里直接利用之前修改过的 ysoserial 来快速生成反序列化 payload，地址：[https://github.com/KpLi0rn/ysoserial](https://github.com/KpLi0rn/ysoserial)
+这里直接利用修改过的 ysoserial 来快速生成反序列化 payload，地址：[https://github.com/KpLi0rn/ysoserial](https://github.com/KpLi0rn/ysoserial)
 
 将上面的代码保存下来，然后在 codefile: 后指定路径即可快速生成
 
