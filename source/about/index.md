@@ -6,7 +6,7 @@ categories:
 tags:
 ---
 
-## <center>信息安全专业在校生 & CTF web🐶 & 安全研究实习生</center>
+## <center>信息安全专业在校生 & CTF Web🐶 & 红队摸🐟手 & 安全研究实习生</center>
 
 
 
