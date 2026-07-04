@@ -7,10 +7,6 @@ tags:
   - 内存马
   - Tomcat内存马
 ---
--   参考: [Java内存马系列-05-Tomcat 之 Servlet 型内存马 | Drunkbaby’s Blog](https://drun1baby.github.io/2022/09/04/Java%E5%86%85%E5%AD%98%E9%A9%AC%E7%B3%BB%E5%88%97-05-Tomcat-%E4%B9%8B-Servlet-%E5%9E%8B%E5%86%85%E5%AD%98%E9%A9%AC/)
-
----
-
 ## 0x01 前言
 
 感觉 Servlet 内存马这块是千人千语吧，难度实在是不小，光是不同 Tomcat 获取 Context 就需要不少，而且 Servlet 还有动态注册一说，难度还是蛮大的。
@@ -658,3 +654,4 @@ Servlet 型内存马相比于前几种的内存马，更容易被查杀出来，
 ## 0x06 参考资料
 
 [https://goodapple.top/archives/1355](https://goodapple.top/archives/1355)
+[Java内存马系列-05-Tomcat 之 Servlet 型内存马](https://drun1baby.github.io/2022/09/04/Java%E5%86%85%E5%AD%98%E9%A9%AC%E7%B3%BB%E5%88%97-05-Tomcat-%E4%B9%8B-Servlet-%E5%9E%8B%E5%86%85%E5%AD%98%E9%A9%AC/)

@@ -7,10 +7,6 @@ tags:
   - 内存马
   - Tomcat内存马
 ---
--   参考: [Java内存马系列-02-内存马介绍 | Drunkbaby’s Blog](https://drun1baby.top/2022/08/21/Java%E5%86%85%E5%AD%98%E9%A9%AC%E7%B3%BB%E5%88%97-02-%E5%86%85%E5%AD%98%E9%A9%AC%E4%BB%8B%E7%BB%8D/)
-
----
-
 ## 0x01 内存马简史
 
 由于现在各种防护措施越来越多，文件shell就如c0ny1师傅所说的大部分已经气数已尽，内存马因其隐蔽性等优点从而越来越盛行。
@@ -383,7 +379,3 @@ public interface ServletContext {
 ![](https://cdn.nlark.com/yuque/0/2026/png/39170111/1781251527584-20bd0044-fb7f-40fe-a0fe-75e7dddb8217.png)
 
 ServletContext接口的实现类为ApplicationContext类和ApplicationContextFacade类，其中ApplicationContextFacade是对ApplicationContext类的包装。我们对Context容器中各种资源进行操作时，最终调用的还是StandardContext中的方法，因此StandardContext是Tomcat中负责与底层交互的Context。
-
-## 0x05 小结
-
--   简单看了看 JSP 与 Tomcat 中三个 Context 的一些东西，感觉还好。

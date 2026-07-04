@@ -7,10 +7,6 @@ tags:
   - 内存马
   - Tomcat内存马
 ---
--   参考: [Java内存马系列-03-Tomcat 之 Filter 型内存马 | Drunkbaby’s Blog](https://drun1baby.top/2022/08/22/Java%E5%86%85%E5%AD%98%E9%A9%AC%E7%B3%BB%E5%88%97-03-Tomcat-%E4%B9%8B-Filter-%E5%9E%8B%E5%86%85%E5%AD%98%E9%A9%AC/)
-
----
-
 ## 0x01 前言
 
 学过 Servlet 的应该都知道 filter (过滤器)，我们可以通过自定义过滤器来做到对用户的一些请求进行拦截修改等操作，下面是一张简单的流程图
@@ -19,7 +15,7 @@ tags:
 
 从上图可以看出，我们的请求会经过 filter 之后才会到 Servlet ，那么如果我们动态创建一个 filter 并且将其放在最前面，我们的 filter 就会最先执行，当我们在 filter 中添加恶意代码，就会进行命令执行，这样也就成为了一个内存 Webshell
 
-所以我们后文的目标：**动态注册恶意 Filter，并且将其放到 最前面**
+所以我们后文的目标：**动态注册恶意 Filter，并且将其放到 filterMaps 最前面**
 
 ## 0x02 Tomcat Filter 流程分析
 
@@ -922,12 +918,9 @@ c0ny1 师傅写的检测内存马的工具，能够检测并且进行删除，�
 
 ![](https://cdn.nlark.com/yuque/0/2026/png/39170111/1781251533033-d27c68d1-1498-4b9a-870e-2322101b6d11.png)
 
-## 0x06 小结
-
-这么学习下来感觉内存马的注入，不知道怎么具体实现，总的来说可以归结为获取到 StandContext，然后通过反射注入。表现形式为 Filter。具体的实施可以是上传 .jsp 文件
-
 ## 0x07 参考资料
 
 [http://wjlshare.com/archives/1529](http://wjlshare.com/archives/1529)  
 [https://blog.csdn.net/qq\_34101364/article/details/120856415](https://blog.csdn.net/qq_34101364/article/details/120856415)  
 [https://www.cnblogs.com/nice0e3/p/14622879.html#servletcontext](https://www.cnblogs.com/nice0e3/p/14622879.html#servletcontext)
+[Java内存马系列-03-Tomcat 之 Filter 型内存马](https://drun1baby.top/2022/08/22/Java%E5%86%85%E5%AD%98%E9%A9%AC%E7%B3%BB%E5%88%97-03-Tomcat-%E4%B9%8B-Filter-%E5%9E%8B%E5%86%85%E5%AD%98%E9%A9%AC/)

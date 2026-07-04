@@ -7,10 +7,6 @@ tags:
   - 内存马
   - Tomcat内存马
 ---
--   参考: [Java内存马系列-04-Tomcat 之 Listener 型内存马 | Drunkbaby’s Blog](https://drun1baby.github.io/2022/08/27/Java%E5%86%85%E5%AD%98%E9%A9%AC%E7%B3%BB%E5%88%97-04-Tomcat-%E4%B9%8B-Listener-%E5%9E%8B%E5%86%85%E5%AD%98%E9%A9%AC/)
-
----
-
 ## 0x01 前言
 
 内存马给我最大的感受是，它可以有很强的隐蔽性，但是攻击方式也是比较局限，仅仅是文件上传这种，相比于反序列化其实，反序列化的危害性要强的多的多。
@@ -510,3 +506,4 @@ public class ListenerShell implements ServletRequestListener {
 
 [https://goodapple.top/archives/1355](https://goodapple.top/archives/1355)  
 [http://wjlshare.com/archives/1651](http://wjlshare.com/archives/1651)
+ [Java内存马系列-04-Tomcat 之 Listener 型内存马](https://drun1baby.github.io/2022/08/27/Java%E5%86%85%E5%AD%98%E9%A9%AC%E7%B3%BB%E5%88%97-04-Tomcat-%E4%B9%8B-Listener-%E5%9E%8B%E5%86%85%E5%AD%98%E9%A9%AC/)

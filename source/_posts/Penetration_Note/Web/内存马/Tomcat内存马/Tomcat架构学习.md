@@ -7,10 +7,6 @@ tags:
   - 内存马
   - Tomcat内存马
 ---
--   参考文章[Java内存马系列-01-基础内容学习 | Drunkbaby’s Blog](https://drun1baby.top/2022/08/19/Java%E5%86%85%E5%AD%98%E9%A9%AC%E7%B3%BB%E5%88%97-01-%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9%E5%AD%A6%E4%B9%A0/)
-
----
-
 # 0x01 Java Web 三大件
 
 Java Web 三大件，也就是 Servlet，Filter，Listener
@@ -297,3 +293,4 @@ Tomcat 自定义的类加载器 WebAppClassloader 为了确保隔离多个 WebAp
 [https://blog.csdn.net/qq\_34101364/article/details/120856415](https://blog.csdn.net/qq_34101364/article/details/120856415)  
 [https://www.freebuf.com/articles/web/321975.html](https://www.freebuf.com/articles/web/321975.html)  
 [https://github.com/Y4tacker/JavaSec/blob/main/5.%E5%86%85%E5%AD%98%E9%A9%AC%E5%AD%A6%E4%B9%A0/Tomcat/Tomcat%E4%BB%8B%E7%BB%8D/Tomcat%E4%BB%8B%E7%BB%8D.md](https://github.com/Y4tacker/JavaSec/blob/main/5.%E5%86%85%E5%AD%98%E9%A9%AC%E5%AD%A6%E4%B9%A0/Tomcat/Tomcat%E4%BB%8B%E7%BB%8D/Tomcat%E4%BB%8B%E7%BB%8D.md)
+[Java内存马系列-01-基础内容学习](https://drun1baby.top/2022/08/19/Java%E5%86%85%E5%AD%98%E9%A9%AC%E7%B3%BB%E5%88%97-01-%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9%E5%AD%A6%E4%B9%A0/)
