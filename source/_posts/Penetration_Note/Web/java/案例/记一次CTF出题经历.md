@@ -50,7 +50,7 @@ AES 参数在 `Crypto.java` 中：
 
 继续审计 `HashCode.java`：
 
-![image-20260814155259280](/Users/bigcolaxd/Library/Application Support/typora-user-images/image-20260814155259280.png)
+![image-20260814155259280.png](https://cdn.nlark.com/yuque/0/2026/png/39170111/1786694558824-415236a8-a11c-4093-a031-e6910c5aecea.png?x-oss-process=image%2Fformat%2Cwebp)
 
 参考CC6链前段，在此题中，如果把 `HashCode` 对象作为 `HashMap` 的 key，反序列化 `HashMap` 时会重新计算 key 的 hash，最终加载恶意类：
 
