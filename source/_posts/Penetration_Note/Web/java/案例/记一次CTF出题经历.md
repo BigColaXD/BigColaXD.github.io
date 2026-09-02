@@ -69,7 +69,7 @@ ObjectInputStream.readObject()
 
 构造一个无包名、带无参构造或静态初始化逻辑的 class。可以exec命令执行反弹shell也可以通过工具生成能回显执行结果的类字节码。
 
-![image-20260814154021791](/Users/bigcolaxd/Library/Application Support/typora-user-images/image-20260814154021791.png)
+![image-20260814154021791](https://cdn.nlark.com/yuque/0/2026/png/39170111/1788352597752-ec2ebdbd-47d1-4b13-8fc9-6191f058fead.png)
 
 编译并读取 `Payload.class` 的字节内容：
 
